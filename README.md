@@ -47,3 +47,17 @@ Para rodar em segundo plano adicione o parametro `-d` ao comando:
 ```
 $ docker-compose up -d ID_SERVICO1 ID_SERVICO2
 ```
+
+&nbsp;
+
+Para parar todos serviços:
+```
+$ docker-compose stop
+```
+
+&nbsp;
+
+Para parar serviços específicos indique os ID's dos serviços **separado por espaço**:
+```
+$ docker-compose stop ID_SERVICO1 ID_SERVICO2
+```
