@@ -10,13 +10,14 @@ Veja o passo a passo: [Instalando Docker Engine & Compose](docs/INSTALANDO_DOCKE
 
 &nbsp;
 
-## Serviços disponíveis
+## Serviços
 
-| Serviço    	| Versão              	| Porta         | ID            	|
-|------------	|---------------------	|-------------  |-----------------	|
-| RabbitMQ   	| 3-management-alpine 	| 15672,5672    | docket-rabbitmq 	|
-| PostgreSQL 	| 13-alpine           	| 5432          | docket-postgres 	|
-| pgAdmin4   	| 4.30                	| 16543         | docket-pgadmin4 	|
+| Serviço | Porta | Versão | ID |
+| -	| -	| -	| - |
+| RabbitMQ | 5672 | 3-management-alpine | docket-rabbitmq |
+| RabbitMQ Management | 15672 | 3-management-alpine | docket-rabbitmq |
+| PostgreSQL | 5432 | 13-alpine | docket-postgres |
+| pgAdmin4 | 16543 | 4.30 | docket-pgadmin4 |
 
 &nbsp;
 
