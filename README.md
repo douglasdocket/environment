@@ -47,7 +47,3 @@ Para rodar em segundo plano adicione o parametro `-d` ao comando:
 ```
 $ docker-compose up -d ID_SERVICO1 ID_SERVICO2
 ```
-
-&nbsp;
-
-Com os serviços rodando basta acessá-los em `localhost:PORTA_SERVICO`
