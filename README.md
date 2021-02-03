@@ -12,11 +12,11 @@ Veja o passo a passo: [Instalando Docker Engine & Compose](docs/INSTALANDO_DOCKE
 
 ## Serviços disponíveis
 
-| Serviço    	| Versão              	| ID            	|
-|------------	|---------------------	|-----------------	|
-| RabbitMQ   	| 3-management-alpine 	| docket-rabbitmq 	|
-| PostgreSQL 	| 13-alpine           	| docket-postgres 	|
-| pgAdmin4   	| 4.30                	| docket-pgadmin4 	|
+| Serviço    	| Versão              	| Porta         | ID            	|
+|------------	|---------------------	|-------------  |-----------------	|
+| RabbitMQ   	| 3-management-alpine 	| 15672,5672    | docket-rabbitmq 	|
+| PostgreSQL 	| 13-alpine           	| 5432          | docket-postgres 	|
+| pgAdmin4   	| 4.30                	| 16543         | docket-pgadmin4 	|
 
 &nbsp;
 
@@ -46,3 +46,7 @@ Para rodar em segundo plano adicione o parametro `-d` ao comando:
 ```
 $ docker-compose up -d ID_SERVICO1 ID_SERVICO2
 ```
+
+&nbsp;
+
+Com os serviços rodando basta acessá-los em `localhost:PORTA_SERVICO`
