@@ -1,0 +1,37 @@
+version: '3'
+services:
+  docket-postgres:
+    image: postgres:13-alpine
+    networks:
+      - docket-network
+    ports:
+      - 5432:5432
+    volumes:
+      - /backups
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=docket
+
+  docket-pgadmin4:
+    image: dpage/pgadmin4:4.30
+    networks:
+      - docket-network
+    ports:
+      - 16543:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=postgres@postgres.com
+      - PGADMIN_DEFAULT_PASSWORD=postgres
+    depends_on:
+      - docket-postgres
+
+  docket-rabbitmq:
+    image: rabbitmq:3-management-alpine
+    networks:
+      - docket-network
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+networks:
+  docket-network:
+    driver: bridge
