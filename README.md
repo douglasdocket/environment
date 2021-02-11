@@ -61,3 +61,18 @@ Para parar serviços específicos indique os ID's dos serviços **separado por e
 ```
 $ docker-compose stop ID_SERVICO1 ID_SERVICO2
 ```
+
+&nbsp;
+
+## Restaurando backups
+
+Você pode fazer o `restore` de um `backup` normalmente através do pgAdmin4, mas existe um limite de 50mb de tamanho por arquivo.
+
+O diretório `backups` é vinculado ao container do postgres, ou seja, qualquer alteração feita na maquina será refletida dentro do container.
+
+&nbsp;
+
+Para fazer o restore de um backup:
+```
+docker exec docket-postgres pg_restore -U postgres -d docket /backups/<nome_arquivo>.backup
+```

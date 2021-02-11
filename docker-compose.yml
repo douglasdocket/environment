@@ -2,6 +2,7 @@ version: '3'
 services:
   docket-postgres:
     image: postgres:13-alpine
+    container_name: docket-postgres
     networks:
       - docket-network
     ports:
