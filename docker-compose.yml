@@ -1,7 +1,7 @@
 version: '3'
 services:
   docket-postgres:
-    image: postgres:13-alpine
+    image: registry.gitlab.com/dalibo/postgresql_anonymizer:stable
     container_name: docket-postgres
     networks:
       - docket-network
