@@ -14,7 +14,7 @@ services:
       - POSTGRES_DB=docket
 
   docket-pgadmin4:
-    image: dpage/pgadmin4:4.30
+    image: dpage/pgadmin4:5
     networks:
       - docket-network
     ports:
