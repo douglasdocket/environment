@@ -14,16 +14,16 @@ services:
       - POSTGRES_DB=docket
 
   docket-pgadmin4:
-    image: dpage/pgadmin4:5
+    image: dpage/pgadmin4:5.1
     networks:
       - docket-network
     ports:
       - 16543:80
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=postgres@postgres.com
       - PGADMIN_DEFAULT_PASSWORD=postgres
-    depends_on:
-      - docket-postgres
 
   docket-rabbitmq:
     image: rabbitmq:3-management-alpine
