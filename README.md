@@ -29,6 +29,13 @@ Veja o passo a passo: [Instalando Docker Engine & Compose](docs/INSTALANDO_DOCKE
 
 &nbsp;
 
+Para permitir escrita/leitura do container no diretório `pgadmin-data`:
+```
+$ sudo chown -R 5050:5050 pgadmin-data
+```
+
+&nbsp;
+
 Para rodar todos serviços disponíveis:
 ```
 $ docker-compose up
